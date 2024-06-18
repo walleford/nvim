@@ -22,14 +22,13 @@ ts.setup({
         "typescript",
         "javascript",
         "toml",
-        "c_sharp",
         "json",
         "yaml",
-        "rust",
         "css",
         "html",
         "lua",
-        "python"
+        "python",
+        "zig"
     },
     rainbow = {
         enable = true,
