@@ -1,5 +1,5 @@
-require('settings')
 require('plugins')
+require('settings')
 
 vim.o.smartcase = true
 vim.o.undofile = true
