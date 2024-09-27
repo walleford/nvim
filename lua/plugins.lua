@@ -20,34 +20,8 @@ return require("packer").startup(function(use)
         end,
         requires = { "nvim-web-devicons" },
     })
+    use({"rose-pine/neovim"})
 
-    -- tree sitter
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = function()
-            require("nvim-treesitter.install").update({ with_sync = true })
-        end,
-        config = function()
-            require("configs.treesitter")
-        end,
-    })
-
-    -- nvim-tree
-    use {
-        "nvim-tree/nvim-tree.lua",
-        requires = {
-            "nvim-tree/nvim-web-devicons",
-        },
-    }
-    use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
-            "MunifTanJim/nui.nvim",
-        },
-    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         -- or                            , branch = '0.1.x',
@@ -69,6 +43,9 @@ return require("packer").startup(function(use)
     use {
     'ziglang/zig.vim'
     }
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua' -- recommended if need floating window support
+    use 'neovim/nvim-lspconfig'
 
 end)
 
