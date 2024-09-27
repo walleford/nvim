@@ -13,14 +13,11 @@ local key_mapper = function(mode, key, result)
 	{noremap = true, silent = true}
 	)
 end
-local function open_nvim_tree()
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
-
+-- setting the leader to the - symbol
 key_mapper('', '-','<leader>')
+-- mapping 'jk' to the ESC key to leave insert mode
 key_mapper('i', 'jk', '<ESC>')
+-- next 4 are disabling the use of the arrow keys :) for your benefit i swear
 key_mapper('', '<up>', '<nop>')
 key_mapper('', '<down>', '<nop>')
 key_mapper('', '<left>', '<nop>')
